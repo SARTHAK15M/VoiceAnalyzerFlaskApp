@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Voice Analyzer</h1>
+        <p>Record your voice, and we'll analyze its sentiment.</p>
+        
+        <button id="startButton">Start Recording</button>
+        <button id="stopButton" disabled>Stop Recording</button>
+        
+        <p id="status">Click Start Recording to begin.</p>
+            
+        <div class="results">
+            <h2>Analysis Results:</h2>
+            <p><strong>Transcribed Text:</strong> <span id="transcribedText"></span></p>
+            <p><strong>Sentiment Score:</strong> <span id="sentimentScore"></span></p>
+            <p><strong>Mood:</strong> <span id="mood"></span></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
