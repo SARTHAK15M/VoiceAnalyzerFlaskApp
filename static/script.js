@@ -5,6 +5,9 @@ const transcribedTextSpan = document.getElementById('transcribedText');
 const sentimentScoreSpan = document.getElementById('sentimentScore');
 const moodSpan = document.getElementById('mood');
 
+// This is your new backend API URL from Render.com
+const RENDER_API_BASE_URL = 'https://voiceanalyzerflaskapp.onrender.com';
+
 // Check for browser support
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 if (!SpeechRecognition) {
@@ -27,7 +30,8 @@ if (!SpeechRecognition) {
 
         try {
             // Send the transcribed text to Flask for sentiment analysis
-            const response = await fetch('/analyze_text', {
+            // IMPORTANT: Now using the full Render API URL
+            const response = await fetch(`${RENDER_API_BASE_URL}/analyze_text`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
