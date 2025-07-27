@@ -3,27 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice Analyzer</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Aisphere.co.in - Your AI Portal</title>
+    <style>
+        /* Basic styling for the main page to make buttons look decent */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f4f8; /* Light background */
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .tool-section {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            max-width: 400px;
+            width: 90%;
+            transition: transform 0.2s ease-in-out;
+        }
+        .tool-section:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            color: #3498db;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .btn-link {
+            display: inline-block;
+            text-decoration: none; /* Remove underline from links */
+            margin-top: 20px;
+        }
+        .action-button {
+            background-color: #3498db; /* Default button color */
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .action-button:hover {
+            background-color: #2980b9; /* Darker on hover */
+        }
+        .signsync-button {
+            background-color: #2ecc71; /* Green for SignSync */
+        }
+        .signsync-button:hover {
+            background-color: #27ae60;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Voice Analyzer</h1>
-        <p>Record your voice, and we'll analyze its sentiment.</p>
-        
-        <button id="startButton">Start Recording</button>
-        <button id="stopButton" disabled>Stop Recording</button>
-        
-        <p id="status">Click Start Recording to begin.</p>
-            
-        <div class="results">
-            <h2>Analysis Results:</h2>
-            <p><strong>Transcribed Text:</strong> <span id="transcribedText"></span></p>
-            <p><strong>Sentiment Score:</strong> <span id="sentimentScore"></span></p>
-            <p><strong>Mood:</strong> <span id="mood"></span></p>
-        </div>
+    <h1>Welcome to Aisphere.co.in!</h1>
+    <p>Explore our AI-powered tools:</p>
+
+    <div class="tool-section">
+        <h2>Dual Mood Analyzer</h2>
+        <p>Analyze and understand emotions from text or speech.</p>
+        <a href="YOUR_DUAL_MOOD_ANALYZER_URL_HERE" class="btn-link" target="_blank" rel="noopener noreferrer">
+            <button class="action-button">Launch Mood Analyzer</button>
+        </a>
     </div>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-</body>
+    <div class="tool-section">
+        <h2>SignSync: Voice to ASL Demo</h2>
+        <p>Convert spoken words into random American Sign Language demonstrations.</p>
+        <a href="YOUR_RENDERS_SIGNSYNC_APP_URL_HERE" class="btn-link" target="_blank" rel="noopener noreferrer">
+            <button class="action-button signsync-button">Launch SignSync Demo</button>
+        </a>
+    </div>
+
+    <p style="font-size: 0.9em; color: #777; margin-top: 30px;">
+        All demos open in a new tab.
+    </p>
+
+    </body>
 </html>
